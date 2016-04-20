@@ -13,8 +13,8 @@ namespace WSFederationServer
         public void Configuration(IAppBuilder app)
         {
             const string idSrvUrl = "http://localhost:9872/identity/was";   
-//            const string wsFederationUri = "http://localhost:9877/";
-            const string wsFederationUri = "http://localhost:9877/wsfederationserver";
+            const string wsFederationUri = "http://localhost:9877/";
+//            const string wsFederationUri = "http://localhost:9877/wsfederationserver";
 
             app.UseWindowsAuthenticationService(new WindowsAuthenticationOptions
             {
