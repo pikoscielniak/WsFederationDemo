@@ -53,7 +53,8 @@ namespace IdServer
 
         private static void ConfigureAdditionalIdProviders(IAppBuilder appBuilder, string signInAsType)
         {
-            const string wsFederationUrl = "http://localhost:9877/";
+//            const string wsFederationUrl = "http://localhost:9877/";
+            const string wsFederationUrl = "http://localhost:9877/wsfederationserver";
             var windowsAuthentication = new WsFederationAuthenticationOptions
             {
                 AuthenticationType = "windows",
