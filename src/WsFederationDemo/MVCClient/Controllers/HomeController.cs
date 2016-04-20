@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Web;
 using System.Web.Mvc;
 
 namespace MVCClient.Controllers
@@ -12,19 +9,16 @@ namespace MVCClient.Controllers
         {
             return View();
         }
-
-        public ActionResult About()
+        [Authorize]
+        public ActionResult Protected()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
-
-        public ActionResult Contact()
+        [Authorize]
+        public ActionResult Logout()
         {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            Request.GetOwinContext().Authentication.SignOut();
+            return Redirect("/");
         }
     }
 }
