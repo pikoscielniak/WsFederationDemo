@@ -27,9 +27,9 @@ namespace IdServer
                         .UseInMemoryClients(Clients.Get())
                         .UseInMemoryScopes(Scopes.Get())
                         .UseInMemoryUsers(Users.Get());
-//
-//                idServerServiceFactory.ConfigureDefaultViewService(
-//                    new DefaultViewServiceOptions { CacheViews = false });
+
+                idServerServiceFactory.ConfigureDefaultViewService(
+                    new DefaultViewServiceOptions { CacheViews = false });
 
                 idsrvApp.UseIdentityServer(new IdentityServerOptions
                 {
@@ -66,7 +66,7 @@ namespace IdServer
             appBuilder.UseWsFederationAuthentication(windowsAuthentication);
         }
 
-        X509Certificate2 LoadCertificate()
+        static X509Certificate2 LoadCertificate()
         {
             return new X509Certificate2(
                 $@"{AppDomain.CurrentDomain.BaseDirectory}\certificates\idsrv3test.pfx", "idsrv3test");
