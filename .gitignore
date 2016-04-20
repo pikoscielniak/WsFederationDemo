@@ -238,7 +238,7 @@ _Pvt_Extensions
 # FAKE - F# Make
 .fake/
 
-!Src/Server/AdminXeServer/Certificate/idsrv3test.pfx
-!Src/Server/WSFederationService/Certificate/idsrv3test.pfx
+!src/WsFederationDemo/IdServer/Certificates/idsrv3test.pfx
+!src/WsFederationDemo/WSFederationServer/Certificates/idsrv3test.pfx
 **/*.ncrunchsolution
 **/*.ncrunchproject
