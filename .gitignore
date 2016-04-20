@@ -240,3 +240,5 @@ _Pvt_Extensions
 
 !Src/Server/AdminXeServer/Certificate/idsrv3test.pfx
 !Src/Server/WSFederationService/Certificate/idsrv3test.pfx
+**/*.ncrunchsolution
+**/*.ncrunchproject
